@@ -185,20 +185,15 @@
       </a>
     </div>
 
-    <div class="footer">
-      Toque em "Salvar na Agenda" para adicionar aos contatos.
-    </div>
-
-        <!-- Dica de instrução -->
-    <div class="tip-box">
+      <!-- Dica de instrução (Agora clicável) -->
+    <div class="tip-box" onclick="generateVCard()" style="cursor: pointer;">
       <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="12" y1="16" x2="12" y2="12"></line>
-        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="16" x2="12" y2="12"></line>
+      <line x1="12" y1="8" x2="12.01" y2="8"></line>
       </svg>
-      <span>Toque em <strong>"Salvar na Agenda"</strong> para baixar o contato.</span>
+      <span>Toque em <strong>"Salvar na Agenda"</strong> para baixar o contato. Em seguida toque em OK para confirmar</span>
     </div>
-  </div>
 
   <script>
     function generateVCard() {
