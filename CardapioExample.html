@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScreenCard</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #142238;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent: #f97316;
+      --accent-glow: rgba(249, 115, 22, 0.25);
+      --text: #ffffff;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px 16px 60px 16px; }
+    .container { max-width: 680px; margin: 0 auto; }
+
+    .nav-back { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; font-size: 0.85rem; margin-bottom: 10px; font-weight: 500; }
+    .nav-back:hover { color: var(--text); }
+
+    header { padding: 20px 0 24px; text-align: center; }
+    .logo-badge { display: inline-block; background: rgba(249, 115, 22, 0.1); color: var(--accent); font-weight: 700; font-size: 0.8rem; padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; border: 1px solid rgba(249, 115, 22, 0.3); }
+    h1 { font-size: 1.8rem; line-height: 1.25; margin-bottom: 12px; font-weight: 800; }
+    header p { color: var(--text-muted); font-size: 1rem; }
+
+    /* Card Destaque: Serviço Principal */
+    .highlight-card {
+      background: linear-gradient(145deg, #182d4d 0%, #102138 100%);
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      padding: 30px 24px;
+      margin-bottom: 36px;
+      box-shadow: 0 12px 30px var(--accent-glow);
+    }
+    .highlight-tag { color: var(--accent); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .highlight-card h2 { font-size: 1.5rem; margin: 8px 0 12px; font-weight: 800; }
+    .highlight-card p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 16px; }
+    .deliverables { list-style: none; margin-bottom: 24px; }
+    .deliverables li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 0.9rem; color: #f1f5f9; }
+    .deliverables li span { color: var(--accent); font-weight: bold; }
+
+    /* Botão Primário */
+    .btn-cta {
+      display: block;
+      text-align: center;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .btn-cta:active { opacity: 0.85; }
+
+    /* Lista de Outros Serviços */
+    .section-title { font-size: 1.25rem; font-weight: 700; margin: 30px 0 16px; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; }
+    .service-grid { display: flex; flex-direction: column; gap: 16px; }
+    .service-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .service-item h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .service-target { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+    .service-item p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px; }
+    .service-link { font-size: 0.85rem; color: #fff; text-decoration: none; font-weight: 600; }
+    .service-link:hover { text-decoration: underline; }
+
+    /* Mini Bio / Sobre */
+    .bio {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 36px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .bio strong { color: #fff; }
+    .bio a { color: var(--accent); text-decoration: none; }
+    .bio a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="nav-back">← Voltar ao cartão</a>
+
+    <header>
+      <div class="logo-badge">ÁREA DE ATUAÇÃO / CATEGORIA</div>
+      <h1>Seu Nome Aqui</h1>
+      <p>Sua especialidade, resumo profissional ou proposta de valor principal.</p>
+    </header>
+
+    <!-- PRODUTO / SERVIÇO DE DESTAQUE -->
+    <section class="highlight-card">
+      <span class="highlight-tag">Serviço Principal / Flagship</span>
+      <h2>Nome do Seu Produto ou Serviço Principal</h2>
+      <p>Descrição clara e objetiva sobre como esse serviço resolve o problema do seu cliente e quais resultados ele proporciona.</p>
+      
+      <ul class="deliverables">
+        <li><span>✓</span> <strong>Benefício 1:</strong> Descrição do primeiro entregável ou diferencial chave.</li>
+        <li><span>✓</span> <strong>Benefício 2:</strong> Descrição do segundo entregável ou metodologia utilizada.</li>
+        <li><span>✓</span> <strong>Benefício 3:</strong> Descrição do suporte, acompanhamento ou garantia.</li>
+      </ul>
+
+      <a class="btn-cta" href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20saber%20mais%20informações." target="_blank" rel="noopener">
+        Solicitar Orçamento no WhatsApp
+      </a>
+    </section>
+
+    <!-- DEMAIS SERVIÇOS -->
+    <h2 class="section-title">Outras Soluções</h2>
+    
+    <div class="service-grid">
+      <!-- Serviço 1 -->
+      <div class="service-item">
+        <h3>Nome do Serviço Secundário A</h3>
+        <div class="service-target">Para [Público-alvo ideal]</div>
+        <p>Resumo breve do que está incluso neste serviço e para quem ele é recomendado.</p>
+        <a class="service-link" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20Serviço%20A." target="_blank" rel="noopener">Saber mais detalhes →</a>
+      </div>
+
+      <!-- Serviço 2 -->
+      <div class="service-item">
+        <h3>Nome do Serviço Secundário B</h3>
+        <div class="service-target">Para [Empresas / Clientes Específicos]</div>
+        <p>Resumo breve do que está incluso neste serviço e para quem ele é recomendado.</p>
+        <a class="service-link" href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20Serviço%20B." target="_blank" rel="noopener">Solicitar proposta →</a>
+      </div>
+    </div>
+</body>
+</html>
